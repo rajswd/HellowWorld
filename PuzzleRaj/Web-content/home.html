@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<meta charset="UTF-8">//reset.css-->
+    <link href="common.css" rel="stylesheet">
+
+    <title>Puzzle</title>
+</head>
+<body>
+<header><h3> Puzzle </h3> </header>
+<div id="container">
+    <aside>
+        <div>
+            <label for="val1">Number of Row : </label>
+            <input type="text" id="val1" class="text">
+        </div>
+        <div>
+            <label>Number of Column : <input type="text" id="val2" class="text"></label>
+        </div>
+        <div>
+            <button id="clickBtn">Draw It...</button>
+        </div>
+        <div>
+            <label for="val1">Clicked :</label>
+            <span id="totalClicked">0</span> Times
+        </div>
+    </aside>
+    <section>
+        <div class="puzzle-area" id="puzzleArea">
+            <div class="drag-me" id="dragElement"></div>
+        </div>
+    </section>
+</div>
+<div id="divElementToClone">
+    <div></div>
+    <ul class='row'></ul>
+    <li class='col change-view'><span class="icon question-class"></span></li>
+</div>
+<footer class="footer">
+    <span >Raj kumar singh</span>
+    <span>raj.singh@ness.com</span>
+    <span>9066559599</span>
+</footer>
+<script src="jquery.min.js"></script>
+<script src="common.js"></script>
+</body>
+
+</html>
