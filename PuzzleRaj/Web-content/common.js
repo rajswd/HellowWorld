@@ -65,7 +65,7 @@ GameDraw.prototype.changeViewFn =  function(oElement){
                                         }else{
                                             var stackData = this.stackedData.attr('row-data');
                                             if( this.icons[stackData] !== this.icons[elementData]){
-                                                setTimeout(turnToImage,100,this,oElement)
+                                                setTimeout(turnToImage,400,this,oElement)
                                             }else{
                                                 this.stackedData = null;
                                             }
