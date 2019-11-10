@@ -65,7 +65,7 @@ GameDraw.prototype.changeViewFn =  function(oElement){
                                         }else{
                                             var stackData = this.stackedData.attr('row-data');
                                             if( this.icons[stackData] !== this.icons[elementData]){
-                                                setTimeout(turnToImage,500,this,oElement)
+                                                setTimeout(turnToImage,100,this,oElement)
                                             }else{
                                                 this.stackedData = null;
                                             }
@@ -111,13 +111,15 @@ var gameController = (function(){
                                     };
 
                     var drawFn = function(puzzleArea){
+							 $("#error_blk").text("");
+									$('#'+puzzleArea).empty();
                                     var gameEventHandler, numberOfCells, divElmentId, aAlphabet, row,col;
                                     aAlphabet = ['A','B','C','D','E','F','G','H','I','J','K','L',
                                         'M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
                                     row = $('#val1').val();
                                     col = $('#val2').val();
-                                    if((row * col) %2 ){
-                                        console.log("\tIt Can not be Draw...");
+                                    if((row * col) %2  || (row * col) > 52){
+                                        $("#error_blk").text("Can not be Draw...");
                                         return;
                                     }
                                     GameDraw.counter = GameDraw.counter !== undefined ? GameDraw.counter+1 : 1;
@@ -126,7 +128,7 @@ var gameController = (function(){
 
                                     numberOfCells = aAlphabet.slice(0,gameEventHandler.totalCell/2);
                                     gameEventHandler.numberOfPairCells = numberOfCells.concat(numberOfCells);
-                                   // $('#'+puzzleArea).empty();
+                                   
                                     $('#totalClicked').text(0);
                                     divElmentId = gameDrawFn(row,col,gameEventHandler);
                                     $(divElmentId.gameObject).appendTo('#'+puzzleArea);
