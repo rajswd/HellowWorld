@@ -1,12 +1,3 @@
-# HellowWorld
-Test how to create and host project in Github ,master test/
-
-enjoy raj
-raj kumar singh
-ranjan kumar 
-rohit kumar
-
-Ranjeet kumar
-Raj kishore
-jay kishore
-Preaveen kumar
+#Puzzle
+- It is a simple web app developed using jquery css and html.
+- Free time user can play it. 
